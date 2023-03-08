@@ -1,0 +1,89 @@
+.home-heading {                                             
+    grid-column: center-start / center-end;
+    margin: 2rem 2rem;
+    display: grid;
+    /* FOR RESPONSIVE PAGE ALSO */
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    grid-gap: 2rem;
+}
+
+.home {
+    /* background-color: rgb(224, 224, 24); */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 1rem;
+}
+
+.home-img {
+    width: 100%;
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    z-index: 100;
+    background-size: cover;
+}
+
+.h3-home {
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: black;
+    color: aliceblue;
+    text-align: center;
+    padding: 1rem 2rem;
+
+    grid-column: 1 / 3;
+    width: 80%;
+    justify-self: center;
+
+    /*TO OVERLAP WITH IMAGE */
+    grid-row: 1 / 2;                 
+    align-self: end;
+    z-index: 200;
+    transform: translateY(50%);
+}
+
+.common-home_icon{
+    display: flex;
+    margin: 1rem 1rem 1rem .5rem;
+    padding: 1rem;
+    /* background-color: red; */
+    margin-right: 1rem;
+    height: .1rem;
+}
+
+.home-heading P {
+    font-size: 1rem;
+    font-weight: bold;
+}   
+
+.btn-home {
+    grid-column: 1 / 3;
+}
+
+/* TO COMMON FOR ALL SVG ICON */
+svg {
+    width: 1rem;
+    height: 1rem;
+    margin-right: .5rem;
+}
+
+/* FOR SVG ICON DESIGN */
+.icon-heart {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    width: 2.5rem;
+    height: 1.5rem;
+    fill: black;
+    z-index: 200;
+    justify-self: end;
+    padding-top: .5rem;
+}
+
+.icon-heart:active, .icon-heart:focus{
+    fill:red
+}
+
+/* .icon-location {}
+.icon-users{}
+.icon-calendar{}
+.icon-inr{} */
+

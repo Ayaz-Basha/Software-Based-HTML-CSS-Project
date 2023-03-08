@@ -1,0 +1,119 @@
+/* MIN-WIDTH = 481PX - MAX-WIDTH = 768PX
+
+FOR iPAD AND TABLETS */
+@media screen and (min-width:481px) and (max-width:768px) {
+    html {
+        font-size: 65%;
+    }
+
+    .container {
+        display: grid;
+        grid-template-rows: 6rem 60vh min-content min-content repeat(3, min-content);
+        grid-template-columns: [full-start] minmax(6rem, 1fr) 
+        [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] 
+        minmax(6rem, 1fr) [full-end];
+        font-size: 1rem;
+    }
+
+    .sidebar {
+        grid-column: 1 / -1;
+        grid-row: 1 / 2;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .sidebar-btn {
+        border: none;
+        border-radius: none;
+        margin-top: 3rem;
+        background-color: green;
+        height: .3rem;
+        width: 5rem;
+        margin-right: 3rem;
+        margin-bottom: 2rem;
+    }
+
+    .sidebar-btn::before {
+        background-color: green;
+        height: .3rem;
+        width: 5rem;
+        display: block;
+        content: "";
+        transform: translateY(-.7rem);
+    }
+
+    .sidebar-btn::after {
+        background-color: green;
+        height: .3rem;
+        width: 5rem;
+        display: block;
+        content: "";
+        transform: translateY(.4rem);
+    }
+
+    .sidebar-btn:hover,
+    .sidebar-btn:hover::before,
+    .sidebar-btn:hover::after {
+        background-color: red;
+    }
+
+    .header{
+        grid-column: full-start / -1;     
+    }
+
+    .realtors{
+        grid-column: full-start / -1;
+        justify-items: center;
+    }
+
+    .realtors-heading{
+        padding-top: .1rem;
+    }
+
+    .realtors-child{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .story-picture{
+        grid-column: full-start / full-end;
+    }
+
+    .story-picture_1{
+        background-size: cover;
+        width: 80%;
+        height: 95%;
+        grid-row: 1 / 3;
+        grid-column: 2 / 5;
+    }
+    
+    .story-picture_2{
+        grid-row: 3 / 5;
+        grid-column: 4 / 7;
+        width: 100%;
+        height: 95%;
+        background-size: cover;
+    }
+
+    .story-picture_3{
+        background-image: url('../myimg/story-pic3.webp');
+        grid-row: 5 / 8;
+        grid-column: 2 / 4;
+        width: 120%;
+        height: 95%;
+        background-size: cover;
+    }
+
+    .story-content{
+        grid-row: 5 / 6;
+        grid-column: full-start / full-end;
+        margin-top: 1rem;
+        line-height: 3rem;
+        background-color: wheat;
+    }
+
+    .home-heading {                                             
+        grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+    }
+    
+}

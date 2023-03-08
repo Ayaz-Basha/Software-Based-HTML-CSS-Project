@@ -1,0 +1,14 @@
+/* DEVICE BASED ON SCREEN RESOLUTION
+
+MIN-WIDTH = 320PX - MAX-WIDTH = 480PX -----------> FOR MOBILE
+MIN-WIDTH = 481PX - MAX-WIDTH = 768PX -----------> FOR iPAD AND TABLETS
+MIN-WIDTH = 769PX - MAX-WIDTH = 1024PX -----------> FOR SMALL SCREEN AND LAPTOP
+MIN-WIDTH = 1025PX - MAX-WIDTH = 1200PX -----------> FOR DESKTOP AND LARGE SCREEN  */
+
+/* FOR DESKTOP AND LARGE SCREEN */
+@media screen and (min-width:1025px) and (max-width:1200px) 
+{
+    html {
+        font-size: 90%;
+    }
+}

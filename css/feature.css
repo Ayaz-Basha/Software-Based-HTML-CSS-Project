@@ -1,0 +1,53 @@
+.feature{
+    grid-column: center-start / center-end;
+
+    display: grid;
+    /* grid-template-columns: repeat(3, 1fr); */
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));  /*-------------> TO ADJUST CONTENT*/
+    grid-gap: 3rem;
+    margin: 5rem 1rem;
+    padding: 1rem 1rem;
+    align-items: start;
+}
+
+.Feature1{
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-column-gap: 1.5rem;
+}
+
+.svg-icon{
+    fill: rgb(27, 124, 180);
+    width: 2rem;
+    height: 1.5rem;
+    grid-row: 1 / span 2;             
+    transform: translateY(-.5rem);
+}
+
+.heading-feature{
+    color: black;
+    font-size: 1.7rem;
+}
+
+.paragraph-feature{
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+/* ICON COLOUR */
+.icon-amazon{
+    fill:black;
+}
+
+.icon-google{
+    fill:orangered;
+}
+
+.icon-whatsapp{
+    fill: green;
+}
+
+/* PARAGRAPH DESIGN */
+.paragraph-content-align{
+    margin-top: .5rem;
+}

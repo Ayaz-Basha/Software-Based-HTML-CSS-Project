@@ -1,0 +1,68 @@
+/* DEVICE BASED ON SCREEN RESOLUTION
+
+MIN-WIDTH = 320PX - MAX-WIDTH = 480PX -----------> FOR MOBILE
+MIN-WIDTH = 481PX - MAX-WIDTH = 768PX -----------> FOR iPAD AND TABLETS
+MIN-WIDTH = 769PX - MAX-WIDTH = 1024PX -----------> FOR SMALL SCREEN AND LAPTOP
+MIN-WIDTH = 1025PX - MAX-WIDTH = 1200PX -----------> FOR DESKTOP AND LARGE SCREEN
+
+CONVESRION PX TO REM FOR MEDIA QUERIES  10PX = 1REM */
+
+/* FOR SMALL SCREEN AND LAPTOP */
+@media screen and (min-width:769px) and (max-width:1024px) {
+  html {
+    font-size: 75%;
+  }
+  
+  .container {
+    display: grid;
+    grid-template-rows: 6rem 80vh min-content 40vw repeat(3, min-content);
+    grid-template-columns: [full-start] minmax(6rem, 1fr) 
+                           [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end]
+                           minmax(6rem, 1fr) [full-end];
+  }
+
+  .sidebar {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    justify-content: flex-end;
+    align-items: center;
+    
+  }
+
+  .sidebar-btn{
+    border: none;
+    border-radius: none;
+    margin-top: 3rem;
+    background-color:green;
+    height: .3rem;
+    width: 5rem;
+    margin-right: 3rem;
+    margin-bottom: 2rem;
+}
+
+.sidebar-btn::before{
+    background-color:green;
+    height: .3rem;
+    width: 5rem;
+    display: block;
+    content: "";
+    transform: translateY(-.7rem);
+}
+
+.sidebar-btn::after{
+    background-color:green;
+    height: .3rem;
+    width: 5rem;
+    display: block;
+    content: "";
+    transform: translateY(.4rem);
+}
+
+.sidebar-btn:hover, .sidebar-btn:hover::before, .sidebar-btn:hover::after{
+    background-color: red;
+}
+
+.home-heading {                                             
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+}
+}

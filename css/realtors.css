@@ -1,0 +1,45 @@
+.realtors{
+    background-color: rgb(109, 109, 170);
+    grid-column: col-start 7 / full-end;
+    padding: 3rem;
+
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    background-image: linear-gradient(rgb(111, 133, 111), rgb(156, 132, 53)), url(../img/hero.jpeg); 
+} 
+
+.realtors-heading{
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding: 3rem;
+}
+
+.realtors-child{
+    display: grid;
+    grid-template-columns: min-content max-content;
+    grid-row-gap: 2vh;
+    grid-column-gap: 1.5rem;
+    align-items: center;
+}
+
+.realtors-member_photo{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    display: block;
+}
+
+.realtors-members{
+    display: grid;
+    grid-template-rows: max-content max-content;
+    justify-items: center;
+
+}
+
+.realtors-heading_3{}
+
+.realtors-paragraph{
+    font-weight: bold;
+    color: brown;
+}

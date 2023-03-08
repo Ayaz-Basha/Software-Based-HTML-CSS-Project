@@ -1,0 +1,48 @@
+.sidebar{
+    background-color: coral;
+    grid-row: 1 / -1;
+    grid-column: sidebar-start / sidebar-end;
+    display: flex;
+    justify-content: center;
+}
+
+.sidebar-btn{
+    border: none;
+    border-radius: none;
+    margin-top: 5rem;
+    background-color:green;
+    height: .3rem;
+    width: 5rem;
+}
+
+/* PSUEDO CLASS COMBINE DECLARATION FOR BEFORE AND AFTER
+.sidebar-btn::before, .sidebar-btn::after{
+    background-color: wheat;
+    height: 1rem;
+    width: 4rem;
+    display: block;
+    content: "";
+} */
+
+/* PSUEDO CLASS SEPRATE DECLARATION FOR BEFORE AND AFTER */
+.sidebar-btn::before{
+    background-color:green;
+    height: .3rem;
+    width: 5rem;
+    display: block;
+    content: "";
+    transform: translateY(-.8rem);
+}
+
+.sidebar-btn::after{
+    background-color:green;
+    height: .3rem;
+    width: 5rem;
+    display: block;
+    content: "";
+    transform: translateY(.5rem);
+}
+
+.sidebar-btn:hover, .sidebar-btn:hover::before, .sidebar-btn:hover::after{
+    background-color: red;
+}

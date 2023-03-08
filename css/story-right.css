@@ -1,0 +1,72 @@
+
+.story-content{
+    grid-column: col-start 5 / full-end;
+    padding: 2rem 8vw;
+
+    /* 1ST STEP USING FLEX
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start; */
+
+    /* 2ND STEP USING GRID */
+    display: grid;
+    align-items: center;
+    justify-items: start;
+}
+
+.heading-3-storycontent{
+    text-align: center;
+    color: blueviolet;
+    font-size: 1.5rem;
+}
+
+.heading-2-storycontent{
+    margin-top: 2rem;
+    text-align: center;
+    color: black;
+    font-size: 1.9rem;
+    font-style: italic;
+}
+
+.paragraph-storycontent{
+    color:black;
+    margin: 2rem 0;
+    font-weight:bold;
+    color:darkblue;
+    font-size: 1.2rem;
+}
+
+.btn{
+    background-color:orangered;
+    color: white;
+    border: none;
+    border-radius: none;
+    font-size: 1rem;
+    text-transform: uppercase;
+    padding: .3rem .5rem;
+    font-weight: bold;
+    box-shadow: .2rem .2rem black;
+    cursor: pointer;
+    
+}
+
+.btn:hover{
+    background-color: green;
+    color:black;
+    animation: btn-design .2s linear infinite reverse;
+}
+
+@keyframes btn-design {
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-.1rem);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+}
